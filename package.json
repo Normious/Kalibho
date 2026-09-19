@@ -1,0 +1,23 @@
+{
+  "name": "kalibho",
+  "version": "1.0.0",
+  "description": "Slug/URL generator + collision checker",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "migrate": "node src/migrate.js",
+    "seed": "node src/seed.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "fastify": "^4.28.0",
+    "@fastify/cors": "^9.0.0",
+    "@fastify/helmet": "^11.0.0",
+    "better-sqlite3": "^12.2.0",
+    "dotenv": "^16.4.5",
+    "pino-pretty": "^11.0.0",
+    "uuid": "^10.0.0"
+  }
+}

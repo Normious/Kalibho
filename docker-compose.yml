@@ -1,0 +1,16 @@
+services:
+  kalibho:
+    build: .
+    container_name: kalibho
+    restart: unless-stopped
+    ports:
+      - "4010:4010"
+    environment:
+      - NODE_ENV=production
+      - PORT=4010
+      - DATABASE_PATH=/app/data/kalibho.db
+    volumes:
+      - kalibho_data:/app/data
+
+volumes:
+  kalibho_data:
